@@ -18,9 +18,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -55,7 +53,7 @@ header a {
     list-style-type: none;
 }
 
-#menu>li {
+#menu > li {
     margin-bottom: 1em;
 }
 
@@ -90,7 +88,7 @@ nav {
 
 /* Main content */
 main {
-    /* Make main element take up any surplus space to push footer down */
+    /* Enlarge main element to push footer down*/
     flex: 1 0 auto;
     /* Add margin at the top to prevent content from being covered by the header */
     margin-top: 47px;
@@ -119,8 +117,7 @@ main {
     padding-left: 10px;
 }
 
-#cover-text>h2,
-#cover-text>h3 {
+#cover-text > h2, #cover-text > h3 {
     color: #ffffff;
 }
 
@@ -136,8 +133,8 @@ main {
     font-size: 280%;
 }
 
-#benefits-physical>div,
-#benefits-mental>div {
+#benefits-physical > div,
+#benefits-mental > div {
     line-height: 20px;
     margin-bottom: 20px;
 }
@@ -168,30 +165,30 @@ main {
     justify-content: center;
 }
 
-/*Meetup times section*/
+/* Meetup Times section */
 #times {
-    background: url("../images/dublin-city.webp") no-repeat center/cover;
-    /*Handles responsivity without the need for a media query*/
-    display:flex;
+    background: url('../images/dublin-city.webp') no-repeat center/cover;
+    /* Handles responsivity without the need for a media query */
+    display: flex;
     flex-wrap: wrap;
 }
 
 #times div {
     color: #fafafa;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, .6);
     padding: 15px;
     text-align: center;
-    /* This will not wrap on screens of less than 400ox wide.
-    Each div will expand to fil the available space on its row */
+    /* This will not wrap on screens of less than 400px wide.
+    Each div will expand to fill the available space on its row */
     flex-basis: 200px;
     flex-grow: 1;
-    /* Creates a grid of meetup time div over the background image */
+    /* Creates a grid of meetup time dives over the background image */
     border: 2px solid white;
 }
 
-#tmes h3 {
+#times h3 {
     /* Override the heading colour set in general styles */
-    color:#fafafa;
+    color: #fafafa;
 }
 
 /* Gallery page */
@@ -204,7 +201,7 @@ main {
     line-height: 0;
 }
 
-/* Signup page */
+/* Form */
 #signup {
     background-image: url("../images/signup-image.webp");
     background-size: cover;
@@ -213,24 +210,31 @@ main {
     flex-grow: 1;
 }
 
+
 #signup-form {
     color: #ffffff;
     background-color: rgba(60, 60, 60, 0.6);
     padding: 30px;
 }
 
+
 #signup-form>h2 {
     color: #fafafa;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
 
 .text-input {
     background: transparent;
     color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
     border: 1px solid #fafafa;
     border-radius: 2px;
     padding: 0 5px;
 }
+
 
 .radio-buttons {
     width: 100%;
@@ -238,12 +242,13 @@ main {
     justify-content: space-between;
 }
 
+
 .join-button {
     margin-top: 20px;
     border-radius: 2px;
     padding: 15px 32px;
     font-size: 100%;
-    backgrround-color: #454b1b;
+    background-color: #454b1b;
     color: #fafafa;
 }
 
@@ -270,10 +275,8 @@ main {
     }
 }
 
-
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
-
     /* Header */
     nav {
         display: block;
@@ -287,7 +290,7 @@ main {
         display: flex;
     }
 
-    #menu>li {
+    #menu > li {
         padding-left: 1rem;
     }
 
@@ -321,25 +324,27 @@ main {
         width: 100%;
     }
 
-    #benefits-physical>div,
-    #benefits-mental>div {
+    #benefits-physical > div,
+    #benefits-mental > div {
         width: 75%;
     }
 
-    #benefits-mental>div {
+    #benefits-mental > div {
         text-align: end;
         align-self: flex-end;
     }
 
+    /* Gallery */
     #photos {
         column-count: 3;
     }
 
-    /*Form */
+    /* Form */
     #signup {
         background-position: center;
         position: relative;
     }
+
     #signup-form {
         max-width: 400px;
         position: absolute;
@@ -348,7 +353,7 @@ main {
     }
 
     .text-input:hover {
-        border-color: f16c6b;
+        border-color: #f16c6b;
     }
 
     .join-button:hover {
@@ -359,8 +364,13 @@ main {
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    #menu a:hover {
+    #menu a:hover{
         border-bottom: 1px solid #3a3a3a;
+    }
+
+    /* Gallery */
+    #photos {
+        column-count: 4;
     }
 }
 
@@ -389,9 +399,5 @@ main {
 
     #benefits-physical > div {
         align-self: flex-end;
-    }
-
-    #photos {
-        column-count: 4;
     }
 }
