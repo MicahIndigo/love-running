@@ -177,17 +177,27 @@ main {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 15px;
     text-align: center;
-    /*This will not wrap on screens of less than 400ox wide.
-    Each div will expand to fil the available space on its row*/
+    /* This will not wrap on screens of less than 400ox wide.
+    Each div will expand to fil the available space on its row */
     flex-basis: 200px;
     flex-grow: 1;
-    /*Creates a grid of meetup time div over the background image*/
+    /* Creates a grid of meetup time div over the background image */
     border: 2px solid white;
 }
 
 #tmes h3 {
-    /*Override the heading colour set in general styles*/
+    /* Override the heading colour set in general styles */
     color:#fafafa;
+}
+
+/* Gallery page */
+#photos img {
+    width: 100%;
+    line-height: 1em;
+}
+
+#photos {
+    line-height: 0;
 }
 
 /* Footer */
